@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <style>
 h1 {
   font-family: 'Roboto Mono', monospace;
@@ -20,25 +21,40 @@ h1 {
   text-align:center;
 
 }
+
 h2 {
   font-family: 'Roboto Mono', monospace;
   color: #000000;
   size: 40;
 
 }
+
+h3 {
+  font-family: 'Roboto Mono', monospace;
+  color: #000000;
+  size: 40;
+  text-align:center;
+}
+
+.container {
+	left: 38%
+}
+
 div {
 	position: absolute;
-    left: 32%;
+    left 32%;
     top: 30%;
     text-align: center;
 	margin: auto;
 
 }
+
 a {
 	text-decoration: none;
   	color: #000000;
 
 }
+
 h5 {
 	text-align:center;
   	size: 20;
@@ -62,28 +78,41 @@ h5 {
 
 
 <body style="text-color:white">
-	<div id="side text" class="side">
+	<div class="side">
     <h2> Y </h2>
     <h2> 2 </h2>
     <h2> K </h2>
     </div>
 
-  <div id="main text" display: inline-block;>
+  <div class="container">
     <h1> VICTORIA GRAHAM </h1>
-    <h1 onhover> SYSTEMS DESIGN ENGINEERING </h1>
-    <h1> ASPIRING DESIGNER + DEVELOPER </h1>
+    <a class="hoverable" onmouseover="typing()">
+      <h3> SYSTEMS DESIGN ENGINEERING </h3>
+    </a>
+    <h3 id="school"></h3>
+    <h3> ASPIRING DESIGNER + DEVELOPER </h3>
     <h5>
-    	<a href="Victoria Graham September 2019.pdf">    Resumé  </a>
-		<a href="mailto:vm2graha@uwaterloo.ca?			Subject=Hello%20there!">    Email  </a>
-		<a href="https://www.linkedin.com/in/vgm/">   LinkedIn  </a>
-		<a href="https://github.com/vicgraham">    Github  </a>
+    	<a href="Victoria Graham September 2019.pdf">Resumé</a>
+		<a href="mailto:vm2graha@uwaterloo.ca?Subject=Hello%20there!">Email</a>
+		<a href="https://www.linkedin.com/in/vgm/">LinkedIn</a>
+		<a href="https://github.com/vicgraham">Github</a>
     </h5>
     </div>
 
 <script type="  text/javascript">
-    document.bgColor = "WHITE";
+    document.bgColor = "#fbf9f0";
 
+    var i = 0;
+    var txt = '@ UNIVERSITY OF WATERLOO';
+    var speed = 70;
 
+    function typing() {
+      if (i < txt.length) {
+        document.getElementById("school").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      }
+    }
 
 </script>
 
